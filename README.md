@@ -1,5 +1,4 @@
-# Detect 5 landmarks with RetinaFace 
-# & Face Align with FER 2013 Dataset.
+# Detect 5 landmarks with RetinaFace & Face Align with FER 2013 Dataset.
 
 ## Reference  
 - [RetinaFace in PyTorch](https://github.com/biubug6/Pytorch_Retinaface)
