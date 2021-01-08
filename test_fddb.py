@@ -194,24 +194,7 @@ if __name__ == '__main__':
                     no_detect_num += 1 
                     aligned_img = cv2.resize(img_raw, (224, 224))
                     continue
-                '''
-                text = "{:.4f}".format(b[4])
-                b = list(map(int, b))
-                cv2.rectangle(img_raw, (b[0], b[1]), (b[2], b[3]), (0, 0, 255), 2)
-                cx = b[0]
-                cy = b[1] + 12
-                cv2.putText(img_raw, text, (cx, cy),
-                            cv2.FONT_HERSHEY_DUPLEX, 0.5, (255, 255, 255))
-
-                # landms
-                cv2.circle(img_raw, (b[5], b[6]), 1, (0, 0, 255), 4)
-                cv2.circle(img_raw, (b[7], b[8]), 1, (0, 255, 255), 4)
-                cv2.circle(img_raw, (b[9], b[10]), 1, (255, 0, 255), 4)
-                cv2.circle(img_raw, (b[11], b[12]), 1, (0, 255, 0), 4)
-                cv2.circle(img_raw, (b[13], b[14]), 1, (255, 0, 0), 4)
-                ''' 
-
-
+        
                 facial5points = [[b[5], b[6]], [b[7], b[8]], [b[9], b[10]] , [b[11], b[12]], [b[13], b[14]]]
 
                 aligned_img = align_face(img_raw, facial5points)
