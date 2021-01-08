@@ -9,7 +9,7 @@
 
 FER 2013 data
 
-1. Download the [FER2013 dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data), train.csv and icml_face_data.csv. train.csv is for training and validation. icml_face_data.csv is for test. 
+1. Download the [FER2013 dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data), `train.csv` and `icml_face_data.csv`. 
 
 2. Organize FER2013 dataset as follows. 
 ```Shell
@@ -22,23 +22,25 @@ FER 2013 data
 
 3. Convert csv type file into jpg type images.   
 
-  1. run 
+  - run 
     ```Shell
     python3 ./data/FDDB/csv/train/csv2image.py
+    ```
+    ```Shell
     python3 ./data/FDDB/csv/test/icml_csv2image.py
     ```
-  2. Then you can find .jpg image files in 
-      ./data/FDDB/images/train/{emotion_class_number} 
+  - Then you can find .jpg image files in 
+    `./data/FDDB/images/train/{emotion_class_number}`
       or in 
-      ./data/FDDB/images/test/{emotion_class_number}  
+    `./data/FDDB/images/test/{emotion_class_number}`
 
-4. You should make a text file ./data/FDDB/img_list.txt 
-  - To make img_list.txt with folder {class_num} in train image folder, please run 
+4. You should make a text file `./data/FDDB/img_list.txt`
+  - To make `img_list.txt` with folder {class_num} in train image folder, please run 
   ```Shell
   python3 ./data/get_image_list.py --phase='train' --class_num={class_num}
   ```
 
-  - To make img_list.txt with {class_num} in test image folder, please run 
+  - To make `img_list.txt` with folder {class_num} in test image folder, please run 
   ```Shell
   python3 ./data/get_image_list.py --phase='test' --class_num={class_num}
   ```
